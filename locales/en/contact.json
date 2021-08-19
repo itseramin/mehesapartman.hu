@@ -1,0 +1,5 @@
+{
+  "page": "Contact",
+  "mapError": "Couldn't load Google Maps :(",
+  "mapLoading": "Loading map..."
+}
