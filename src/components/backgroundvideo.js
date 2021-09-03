@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import BgVideo from "../../static/media/videos/short-sum-720.mp4"
-import Poster from "../../static/media/images/seo/img.png"
+import Poster from "../../static/media/images/misc/seo.webp"
 
 export default function BackgroundVideo() {
   return (

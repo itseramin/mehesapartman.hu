@@ -22,8 +22,8 @@ export default function Home() {
         <SectionDescp>
           {t("description")
             .split("\n")
-            .map(sentence => (
-              <Descp>
+            .map((sentence, index) => (
+              <Descp key={index}>
                 {sentence}
                 <br />
               </Descp>

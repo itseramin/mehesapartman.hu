@@ -67,7 +67,7 @@ export const query = graphql`
     images: allFile(
       filter: {
         relativeDirectory: { eq: "gallery" }
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        extension: { regex: "/(jpeg)|(jpg)|(png)|(webp)/" }
       }
       sort: { fields: relativePath, order: ASC }
     ) {
@@ -77,7 +77,7 @@ export const query = graphql`
           base
           childImageSharp {
             gatsbyImageData(
-              formats: [AUTO, WEBP, AVIF]
+              formats: [AUTO, WEBP]
               height: 1080
               layout: CONSTRAINED
               placeholder: BLURRED

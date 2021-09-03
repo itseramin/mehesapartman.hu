@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     author: `Benjamin Hera`,
     description: `A Méhes Apartman egy egész évben bérelhető, maximum 12 fő számára fenntartott kétszintes, ötszobás nyaralóház a bánki-tótól negyed órányi sétára.`,
-    image: `/static/images/seo/img.png`,
+    image: `/media/images/misc/seo.webp`,
     title: `Méhes Apartman`,
     siteUrl: `https://www.mehesapartman.hu`,
   },
