@@ -1,5 +1,6 @@
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
+import Div100vh from "react-div-100vh"
 import styled from "styled-components"
 
 import Footer from "../components/footer"
@@ -11,10 +12,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Seo
-        title={(t("page") === "Home" ? "" : t("page") + " | ") + t("title")}
-        description={t("descp")}
-      />
+      <Seo title={t("title")} page={t("page")} description={t("descp")} />
       <Body>
         <Header />
         <Main>{children}</Main>
@@ -24,8 +22,8 @@ export default function Layout({ children }) {
   )
 }
 
-const Body = styled.div.attrs({
-  className: "d-flex flex-column min-vh-100",
+const Body = styled(props => <Div100vh {...props} />).attrs({
+  className: "d-flex flex-column",
 })``
 
 const Main = styled.main.attrs({

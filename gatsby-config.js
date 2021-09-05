@@ -1,14 +1,33 @@
+const SITE_URL = `https://mehesapartman.hu`
+
 module.exports = {
   flags: {
-    PRESERVE_WEBPACK_CACHE: false,
-    QUERY_ON_DEMAND: true,
+    DEV_SSR: false,
+    FAST_DEV: false,
+    LMDB_STORE: false,
+    PARALLEL_QUERY_RUNNING: false,
+    PARALLEL_SOURCING: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: false,
   },
+  pathPrefix: "/gatsby-starter-vacation-rental",
   siteMetadata: {
-    author: `Benjamin Hera`,
-    description: `A Méhes Apartman egy egész évben bérelhető, maximum 12 fő számára fenntartott kétszintes, ötszobás nyaralóház a bánki-tótól negyed órányi sétára.`,
-    image: `/media/images/misc/seo.webp`,
-    title: `Méhes Apartman`,
-    siteUrl: `https://www.mehesapartman.hu`,
+    siteUrl: `${SITE_URL}`,
+    SEO: {
+      author: {
+        name: `Benjamin Hera`,
+        website: `https://benjaminhera.me`,
+      },
+      fallbackDescription: `A Méhes Apartman egy egész évben bérelhető, maximum 12 fő számára fenntartott kétszintes, ötszobás nyaralóház a bánki-tótól negyed órányi sétára.`,
+      fallbackTitle: `Méhes Apartman`,
+      image: `/media/images/misc/seo.webp`,
+      type: `website`,
+      url: `${SITE_URL}`,
+    },
+    contacts: {
+      tel: `tel:+0123456789`,
+      facebook: ``,
+      email: `mailto:youremail@mail.com?subject=[Vacation%20Rental]`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -26,7 +45,7 @@ module.exports = {
         },
         languages: [`de`, `en`, `hu`],
         localeJsonSourceName: `locales`,
-        siteUrl: `https://mehesapartman.hu/`,
+        siteUrl: `${SITE_URL}`,
       },
     },
     {
@@ -57,7 +76,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.mehesapartman.hu",
+        host: `${SITE_URL}`,
         policy: [{ allow: "/", userAgent: "*" }],
       },
     },

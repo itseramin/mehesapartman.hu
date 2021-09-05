@@ -35,7 +35,7 @@ export default function Home() {
 }
 
 const Container = styled.div`
-  height: 66vh;
+  height: 50vh;
   mask-image: linear-gradient(
     to top,
     transparent 0%,
@@ -52,17 +52,13 @@ const Container = styled.div`
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
   }
-
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
 `
 
 const SectionSlogan = styled.section.attrs({
   className:
     "align-items-center d-flex flex-column justify-content-center position-relative",
 })`
-  height: 66vh;
+  height: 100%;
   scroll-snap-align: start;
 `
 
