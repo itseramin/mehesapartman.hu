@@ -69,7 +69,7 @@ export const query = graphql`
         relativeDirectory: { eq: "gallery" }
         extension: { regex: "/(jpeg)|(jpg)|(png)|(webp)/" }
       }
-      sort: { fields: relativePath, order: ASC }
+      sort: { fields: [base] }
     ) {
       edges {
         node {
