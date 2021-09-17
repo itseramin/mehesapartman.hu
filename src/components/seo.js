@@ -32,7 +32,7 @@ const Seo = ({ author, description, image, page, title, type, url }) => {
   const pageTitle = page === "Home" ? seo.title : `${page} | ${title}`
 
   return (
-    <Helmet title={pageTitle} htmlAttributes={{ lang: language }}>
+    <Helmet title={`${pageTitle} - Bánk`} htmlAttributes={{ lang: language }}>
       <meta name="author" content={seo.author} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
